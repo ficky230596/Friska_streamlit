@@ -2,3 +2,8 @@ Jalankan aplikasi Streamlit untuk memastikan semuanya berfungsi:
 
 streamlit run app.py
 
+
+psuh :
+git add .
+git commit -m "Update file terbaru"
+git push
