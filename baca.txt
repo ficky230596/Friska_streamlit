@@ -1,0 +1,4 @@
+Jalankan aplikasi Streamlit untuk memastikan semuanya berfungsi:
+
+streamlit run app.py
+
