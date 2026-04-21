@@ -1,6 +1,6 @@
 streamlit
 prophet
-pandas
+pandas>=1.5,<2.2
 openpyxl
 matplotlib
 seaborn
