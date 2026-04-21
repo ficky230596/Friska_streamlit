@@ -295,7 +295,12 @@ def main():
     elif section == "Pivot Table":
         st.subheader("Pivot Table: Jumlah Siswa dan Dana Disalurkan per Jenjang")
         pivot_table = all_data.pivot_table(index='Tahun', columns='Jenjang', values=['Jumlah Siswa', 'Dana Disalurkan'], aggfunc='sum')
-        pivot_table = pivot_table.applymap(lambda x: '{:,.0f}'.format(x) if pd.notnull(x) else '')
+        pivot_table = pivot_table.copy()
+
+        for col in pivot_table.columns:
+            pivot_table[col] = pivot_table[col].map(
+                lambda x: '{:,.0f}'.format(x) if pd.notnull(x) else ''
+            )
         st.dataframe(pivot_table, use_container_width=True)
 
     # Visualizations
