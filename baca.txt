@@ -5,5 +5,5 @@ streamlit run app.py
 
 psuh :
 git add .
-git commit -m "Update file terbaru"
+git commit -m "requirements.txt"
 git push
